@@ -1,0 +1,19 @@
+---
+name: 'GitHub Action Timeline Visualizer'
+description: 'Creates a visualization of GitHub Action workflow run times'
+inputs:
+  result_size:
+    description: 'Number of top time-consuming tasks to display'
+    required: true
+    default: '10'
+  workflow_id:
+    description: 'ID of the workflow run to visualize'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'activity'
+  color: 'blue'
